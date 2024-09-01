@@ -104,9 +104,6 @@ Ready to take your app to the world? You can use this same Docker setup for prod
 
 Have an idea for an improvement? Spotted a bug? Or maybe you just want to say hi? We're all ears! Feel free to open an issue or submit a pull request. We'd love to have you contribute!
 
-## 📜 License
-
-This project is licensed under the MIT License. Check out the LICENSE file for all the legalese.
 
 ## 🎉 Acknowledgements
 
