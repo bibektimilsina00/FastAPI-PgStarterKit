@@ -1,0 +1,32 @@
+networks: 
+  app-network: 
+    driver: bridge 
+
+services:
+  backend: 
+    build: .
+    restart: always
+    networks:       
+      - app-network
+    ports:       
+      - "4000:4000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    command: /app/start.sh  
+  db:
+    image: postgres:16-alpine 
+    networks:       
+      - app-network
+    ports:       
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/pgdata
+    env_file:
+      - .env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+
+volumes:
+  postgres_data:
